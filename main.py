@@ -241,7 +241,7 @@ class Ui_MainWindow(object):
                     sending_msg = f'Encripting your data and information | part : {i}'
                 else:
                     sending_msg = f'{msg}'
-                text_box.send_keys(sending_msg + Keys.ENTER)
+                text_box.send_keys(sending_msg, Keys.ENTER)
                 self.sent_messages_show.append(f'| {i} {sending_msg} -> sent to {name}! |')
             tim = time.localtime()
             end_attack_time = time.strftime("%H:%M:%S", tim)
