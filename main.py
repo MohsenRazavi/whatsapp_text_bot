@@ -15,6 +15,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 from datetime import datetime
 
+
 class Ui_MainWindow(object):
     driver = webdriver.Chrome(executable_path="chromedriver.exe")
     # ChromeDriverManager().install()
@@ -161,54 +162,65 @@ class Ui_MainWindow(object):
         self.Stop.clicked.connect(self.stop_pushed)
         self.encripting_data_2.setChecked(True)
 # ====================================== my codes end =======================================
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.Help_tips.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Welcome To WhatsApp DDOS Attacker !</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">1. Click on START button</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">2. Login to your whatsapp account</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">3. Wait for logging in</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">4. Scroll down to see your intended contact</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">5. Enter his/her name , your message (you can choose one of defualts) , enter number of repeats</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">6. Click on Attack ! to start attack !</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">7. You can cancel every attack by clicking on Stop</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Developer : MohsenRazavi 2095</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">App version : 2.0.0</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">@2022</span></p></body></html>"))
-        self.MainTab.setTabText(self.MainTab.indexOf(self.help_tab), _translate("MainWindow", "Help"))
+                                          "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                          "p, li { white-space: pre-wrap; }\n"
+                                          "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
+                                          "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Welcome To WhatsApp DDOS Attacker !</span></p>\n"
+                                          "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">1. Click on START button</span></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">2. Login to your whatsapp account</span></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">3. Wait for logging in</span></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">4. Scroll down to see your intended contact</span></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">5. Enter his/her name , your message (you can choose one of defualts) , enter number of repeats</span></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">6. Click on Attack ! to start attack !</span></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">7. You can cancel every attack by clicking on Stop</span></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;\"><br /></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">Developer : MohsenRazavi 2095</span></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">App version : 2.0.0</span></p>\n"
+                                          "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10pt;\">@2022</span></p></body></html>"))
+        self.MainTab.setTabText(self.MainTab.indexOf(
+            self.help_tab), _translate("MainWindow", "Help"))
         self.start_button.setText(_translate("MainWindow", "Start"))
         self.name_getter_label.setText(_translate("MainWindow", "Names :"))
-        self.message_getter_label.setText(_translate("MainWindow", "Message  :"))
-        self.number_getter_label.setText(_translate("MainWindow", "Number of repeats :"))
+        self.message_getter_label.setText(
+            _translate("MainWindow", "Message  :"))
+        self.number_getter_label.setText(
+            _translate("MainWindow", "Number of repeats :"))
         self.Attack_button.setText(_translate("MainWindow", "Attack !"))
         self.Stop.setText(_translate("MainWindow", "Stop !"))
-        self.Defulat_settings.setText(_translate("MainWindow", "Defualt message settings :"))
-        self.ip_port.setText(_translate("MainWindow", "Infiltrating through IP-PORT : 192.168.1.1 : i"))
+        self.Defulat_settings.setText(_translate(
+            "MainWindow", "Defualt message settings :"))
+        self.ip_port.setText(_translate(
+            "MainWindow", "Infiltrating through IP-PORT : 192.168.1.1 : i"))
         self.hacking.setText(_translate("MainWindow", "HCKING port : i"))
-        self.encripting_data.setText(_translate("MainWindow", "Encripting data part : i"))
-        self.encripting_data_2.setText(_translate("MainWindow", "No default message"))
-        self.MainTab.setTabText(self.MainTab.indexOf(self.run_tab), _translate("MainWindow", "Run"))
+        self.encripting_data.setText(_translate(
+            "MainWindow", "Encripting data part : i"))
+        self.encripting_data_2.setText(
+            _translate("MainWindow", "No default message"))
+        self.MainTab.setTabText(self.MainTab.indexOf(
+            self.run_tab), _translate("MainWindow", "Run"))
 # =============================== Qt codes end ==========================================
 
 # ========================================== my codes =====================================
 
     def start_pushed(self):
         app.processEvents()
-        start_time = datetime.utcnow()
-        self.done_people_show.append(f'-----> APP STARTED AT {start_time} <----')
+        tim = time.localtime()
+        start_time = time.strftime("%H:%M:%S", tim)
+        self.done_people_show.append(
+            f'-----> APP STARTED AT {start_time} <----')
         self.driver.get('https://web.whatsapp.com/')
 
     def attack_pushed(self):
@@ -216,18 +228,22 @@ class Ui_MainWindow(object):
         num = int(self.number_getter.displayText())
         msg = self.message_getter.displayText()
         self.Wh_photo.setGeometry(QtCore.QRect(390, 20, 281, 171))
-        self.Wh_photo.setPixmap(QtGui.QPixmap("logo/82051-anonymus-hoodie-mask-artist-artwork-digital-art.jpg"))
+        self.Wh_photo.setPixmap(QtGui.QPixmap(
+            "logo/82051-anonymus-hoodie-mask-artist-artwork-digital-art.jpg"))
 
         for name in names:
             app.processEvents()
             tim = time.localtime()
             start_attack_time = time.strftime("%H:%M:%S", tim)
-            self.done_people_show.append(f'Start attacking to {name} at {start_attack_time} !')
+            self.done_people_show.append(
+                f'Start attacking to {name} at {start_attack_time} !')
             chat_name = f'//span[@title="{name}"]'
             # chat = self.driver.find_element_by_xpath(chat_name)
             chat = self.driver.find_element("xpath", chat_name)
             chat.click()
-            text_box_xpath = '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]'
+            # text_box_xpath = '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]'
+            text_box_xpath = '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]'
+
             # text_box = self.driver.find_element_by_xpath(text_box_xpath)
             text_box = self.driver.find_element("xpath", text_box_xpath)
 
@@ -241,8 +257,11 @@ class Ui_MainWindow(object):
                     sending_msg = f'Encripting your data and information | part : {i}'
                 else:
                     sending_msg = f'{msg}'
-                text_box.send_keys(sending_msg, Keys.ENTER)
-                self.sent_messages_show.append(f'| {i} {sending_msg} -> sent to {name}! |')
+                text_box.send_keys(sending_msg)
+                text_box.send_keys(Keys.ENTER)
+                self.sent_messages_show.append(
+                    f'| {i} {sending_msg} -> sent to {name}! |')
+                self.driver.implicitly_wait(0.1)
             tim = time.localtime()
             end_attack_time = time.strftime("%H:%M:%S", tim)
             self.done_people_show.append(f'{name} Done at {end_attack_time} !')
