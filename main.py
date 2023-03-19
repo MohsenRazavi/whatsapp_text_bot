@@ -17,8 +17,8 @@ from datetime import datetime
 
 
 class Ui_MainWindow(object):
-    driver = webdriver.Chrome(executable_path="chromedriver.exe")
-    # ChromeDriverManager().install()
+    driver_path = ChromeDriverManager().install()
+    driver = webdriver.Chrome(executable_path=driver_path)
 
     # =============================== Qt codes ==========================================
 
@@ -154,19 +154,21 @@ class Ui_MainWindow(object):
         self.MainTab.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-# =============================== Qt codes end ==========================================
+        # =============================== Qt codes end ==========================================
 
-# ========================================== my codes ======================================
+        # ========================================== my codes ======================================
         self.start_button.clicked.connect(self.start_pushed)
         self.Attack_button.clicked.connect(self.attack_pushed)
         self.Stop.clicked.connect(self.stop_pushed)
         self.encripting_data_2.setChecked(True)
-# ====================================== my codes end =======================================
+
+    # ====================================== my codes end =======================================
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.Help_tips.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        self.Help_tips.setHtml(_translate("MainWindow",
+                                          "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
                                           "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
                                           "p, li { white-space: pre-wrap; }\n"
                                           "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n"
@@ -211,9 +213,10 @@ class Ui_MainWindow(object):
             _translate("MainWindow", "No default message"))
         self.MainTab.setTabText(self.MainTab.indexOf(
             self.run_tab), _translate("MainWindow", "Run"))
-# =============================== Qt codes end ==========================================
 
-# ========================================== my codes =====================================
+    # =============================== Qt codes end ==========================================
+
+    # ========================================== my codes =====================================
 
     def start_pushed(self):
         app.processEvents()
@@ -221,7 +224,8 @@ class Ui_MainWindow(object):
         start_time = time.strftime("%H:%M:%S", tim)
         self.done_people_show.append(
             f'-----> APP STARTED AT {start_time} <----')
-        self.driver.get('https://web.whatsapp.com/')
+        self.driver.get('https://web.whatsapp.com/')  # whatsapp web
+        # self.driver.get('https://web.eitaa.com//')
 
     def attack_pushed(self):
         names = (self.names_getter.displayText()).split('-')
@@ -238,13 +242,10 @@ class Ui_MainWindow(object):
             self.done_people_show.append(
                 f'Start attacking to {name} at {start_attack_time} !')
             chat_name = f'//span[@title="{name}"]'
-            # chat = self.driver.find_element_by_xpath(chat_name)
             chat = self.driver.find_element("xpath", chat_name)
             chat.click()
-            # text_box_xpath = '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]'
-            text_box_xpath = '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]'
+            text_box_xpath = '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]'  # whatsapp web
 
-            # text_box = self.driver.find_element_by_xpath(text_box_xpath)
             text_box = self.driver.find_element("xpath", text_box_xpath)
 
             for i in range(1, num + 1):
@@ -277,11 +278,12 @@ class Ui_MainWindow(object):
         self.Wh_photo.setGeometry(QtCore.QRect(390, 20, 281, 221))
         self.Wh_photo.setPixmap(QtGui.QPixmap("logo/Anonymous-1200x818.jpg"))
         self.driver.close()
-        self.driver = webdriver.Chrome(executable_path='chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path=self.driver_path)
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
